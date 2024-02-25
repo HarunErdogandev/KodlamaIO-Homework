@@ -9,5 +9,6 @@ namespace DataAccess.Abstract
 {
     public interface ICourseDal:IGenericRepository<Course>
     {
+        public int FunctionName(int categoryID);
     }
 }

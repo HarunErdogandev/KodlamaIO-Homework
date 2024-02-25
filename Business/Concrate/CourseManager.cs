@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,11 +9,21 @@ using System.Threading.Tasks;
 
 namespace Business.Concrate;
 
-internal class CourseManager : ICourseService
+public class CourseManager : ICourseService
 {
+    private readonly ICourseDal _courseDal;
+    public CourseManager(ICourseDal courseDal)
+    {
+        _courseDal= courseDal;
+    }
     public void Add(Course entity)
     {
         throw new NotImplementedException();
+    }
+
+    public int CategoryCauntFunc(int id)
+    {
+        return _courseDal.FunctionName(id);
     }
 
     public void Delete(Course entity)

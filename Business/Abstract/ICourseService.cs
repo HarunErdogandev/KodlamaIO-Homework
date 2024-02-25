@@ -9,5 +9,6 @@ namespace Business.Abstract
 {
     public interface ICourseService : ServiceRepository<Course>
     {
+        public int CategoryCauntFunc(int id);
     }
 }
